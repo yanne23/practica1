@@ -18,5 +18,70 @@ html {
 }
 
 body {
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background-color: #f4f4f4;
   margin-bottom: 60px;
+}
+
+.input-box, .combo-box {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.submit-button {
+  background-color: cadetblue;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+label{
+  display: block;
+  margin-bottom: 5px;
+}
+
+.container {
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20 px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.input-box{
+  height: 30px;
+}
+
+.combo-box{
+  height: 40px;
 }

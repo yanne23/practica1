@@ -23,6 +23,21 @@ public class HomeController : Controller
         return View();
     }
 
+    [HttpPost]
+    public IActionResult FRegistro(operacion objoperacion)
+    {
+        string rspt;
+
+        try{
+            rspt = objoperacion.msjF().ToString()+"";
+        }catch(Exception ex){
+            rspt = ex.Message;
+        }
+
+        ViewData["Message"] = rspt;
+        return View("Index");
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
