@@ -1,8 +1,49 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Registro";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Folmulario de Registro</h1>
+    
+    <form asp-controller="Home" asp-action="FRegistro" method="post">
+       
+        <label for="nom">Nombres:</label>
+        <input type="text" name="nom" class="input-box"/><br><br>
+
+        <label for="ape">Apellidos:</label>
+        <input type="text" name="ape" class="input-box"/><br><br>
+
+        <label for="edad">Edad:</label>
+        <input type="text" name="edad" class="input-box"/><br><br>
+
+        <label >Genero:</label>
+        <input type="radio" name="genero" value="Masculino" >
+        <label for="genM">Masculino</label>
+        <input type="radio" name="genero" value="Femenino" >
+        <label for="genF">Femenino</label><br><br>
+
+        <label for="equipo">Equipos:</label>
+        <input type="text" name="equipo" class="input-box"/><br><br>
+        
+        <label for="cat">Categoria:</label>
+        <select name="cat" class="combo-box">
+            <option value="seleccionar">---------</option>
+            <option value="Sub 17">Sub 17</option>
+            <option value="Sub 20">Sub 20</option>
+            <option value="Mayores">Mayores</option>
+
+        </select><br><br>
+
+        <label for="faltas">A tenido faltas:</label>
+        <input type="checkbox" name="faltas[]" class="Si">
+        <label for="si">Si</label>
+        <input type="checkbox" name="faltas[]" class="No">
+        <label for="no">No</label><br><br>
+
+        <button type="submit" class="submit-button" value="FRegistro">Enviar</button>
+
+    </form>
+
+    <h1>@ViewData["Message"]</h1>
+    
 </div>
